@@ -27,7 +27,7 @@ function getBaseResponse(method, path) {
 
 function getEnrichedResponse(handlerResponse) {
   return {
-    body: { message: handlerResponse.message },
+    body: JSON.stringify(handlerResponse),
     headers: {
       "Content-Type": "application/json",
     },
